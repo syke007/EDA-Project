@@ -32,6 +32,11 @@ typedef struct ops
 
 ops *loadData(ops *list);
 void saveData(ops *list);
+void Show(ops *list);
+prod *headprod_insert(prod *list, int machine, int time);
+ops *headops_insert(ops *list, int opID);
+ops *insert(ops *list, int opID, int machine, int time);
+
 
 #define DADOS
 #endif 

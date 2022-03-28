@@ -25,18 +25,17 @@ ops *loadData(ops *list)
     FILE *fp;
     char line[20];
     int opID, machine, time;
-    fp = fopen("dados.txt", "r");
+    fp = fopen("data.txt", "r");
 
     while (!feof(fp))
     {
         fgets(line, 20, fp);
         sscanf(line, "%d,%d,%d", &opID, &machine, &time);
-        list = head_insert(list, opID);
+        list = headops_insert(list, opID);
         list = insert(list, opID, machine, time);
     }
 
     fclose(fp);
-    
     return list;
 }
 
@@ -49,15 +48,11 @@ ops *loadData(ops *list)
  */
 void saveData(ops *list)
 {
-    {
-
     FILE *fp;
-
-    fp = fopen("dados_guardar.txt", "w+");
+    fp = fopen("saveddata.txt", "w+");
 
     for (; list; list = list->next)
     {
-
         prod *ptr = list->first;
         for (; ptr;)
         {
@@ -65,7 +60,93 @@ void saveData(ops *list)
             ptr = ptr->next;
         }
     }
-
     fclose(fp);
 }
+
+/**
+ * @brief aux
+ * 
+ * @param list 
+ */
+void Show(ops *list)
+{
+    for (; list; list = list->next)
+    {
+
+        prod *ptr = list->first;
+
+        for (; ptr;)
+        {
+            printf("ops -> %d | machine -> %d | time-> %d\n", list->opID, ptr->machine, ptr->time);
+            ptr = ptr->next;
+        }
+    }
+}
+
+/**
+ * @brief  inserçao á cabeça de produçoes. máquinas
+ * 
+ * @param list 
+ * @param machine 
+ * @param time 
+ * @return prod* 
+ */
+prod *headprod_insert(prod *list, int machine, int time)
+{
+    prod *new = (prod *)malloc(sizeof(prod));
+    new->machine = machine;
+    new->time = time;
+    new->next = list;
+
+    return new;
+}
+
+
+/**
+ * @brief inserção á cabeça de operaçoes
+ * 
+ * @param list 
+ * @param opID 
+ * @return ops* 
+ */
+ops *headops_insert(ops *list, int opID)
+{
+    ops *new = (ops *)malloc(sizeof(ops));
+    new->opID = opID;
+    new->first = new->last = NULL;
+    new->next = list;
+
+    return new;
+}
+
+/**
+ * @brief inserir lista de maquinas dentro das operaçoes
+ * 
+ * @param list 
+ * @param opID 
+ * @param machine 
+ * @param time 
+ * @return ops* 
+ */
+ops *insert(ops *list, int opID, int machine, int time)
+{
+    ops *aux = list;
+    while (aux)
+    {
+        if (aux->opID == opID)
+        {
+            break;
+        }
+        aux = aux->next;
+    }
+
+    if (!aux->last)
+    {
+        aux->first = aux->last = headprod_insert(aux->last,machine,time);
+    }
+    else
+    {
+        aux->last = headprod_insert(aux->last,machine,time);
+    }
+    return list;
 }

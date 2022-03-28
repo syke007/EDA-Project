@@ -16,5 +16,16 @@
 
 int main()
 {
+    ops *list = NULL;
+
+    list = loadData(list); 
+
+    system("cls || clear");
+    saveData(list);
+    system("pause");
+
+    system("cls || clear");
+    Show(list);
+    system("pause");
     return 0;
 }
