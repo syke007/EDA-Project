@@ -23,8 +23,20 @@ int main()
     system("cls || clear");
     saveData(list);
     system("pause");
+    system("cls || clear");
+    Show(list);
+    system("pause");
 
     system("cls || clear");
+    removeMachine(list,1);
+    printf("NOVA ->\n");
+    Show(list);
+    system("pause");
+
+
+    system("cls || clear");
+    changeMachine(list, 2,3, 500);
+    printf("NOVA ->\n");
     Show(list);
     system("pause");
     return 0;

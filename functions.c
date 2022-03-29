@@ -150,3 +150,75 @@ ops *insert(ops *list, int opID, int machine, int time)
     }
     return list;
 }
+
+
+/**
+ * @brief Função que remove uma máquina
+ * 
+ * @param list 
+ * @param opID 
+ * @return ops* 
+ */
+ops * removeMachine(ops *list, int opID)
+{
+    if (list != NULL)
+    {
+    for (; list; list = list->next)
+    {
+        if(list->opID == opID)
+        {
+            prod *ptr = list->first;
+
+            for (; ptr;)
+            {
+                if(list->first->next)
+                {
+                    list->first = list->first->next;
+                    list->next->prev = NULL;
+                }
+                else
+                {
+                    list->first = NULL;
+                    list->last = NULL;
+                }
+                free(ptr);
+                ptr = ptr->next;
+            }
+        }
+    }
+    }
+    return list;
+}
+
+
+/**
+ * @brief Funçao que altera atributos de uma maquina
+ * 
+ * @param list 
+ * @param opID 
+ * @param machine 
+ * @param time 
+ * @return ops* 
+ */
+ops * changeMachine(ops *list, int opID,int machine, int time)
+{
+    if (list != NULL)
+    {
+    for (; list; list = list->next)
+    {
+        if(list->opID == opID)
+        {
+            prod *ptr = list->first;
+
+            for (; ptr;)
+            {
+                if(ptr->machine == machine)
+                {
+                    ptr->time = time;
+                }
+                ptr = ptr->next;
+            }
+        }
+    }
+    return list;
+}
