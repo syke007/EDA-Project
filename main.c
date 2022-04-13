@@ -33,11 +33,20 @@ int main()
     Show(list);
     system("pause");
 
-
     system("cls || clear");
     changeMachine(list, 2,3, 500);
     printf("NOVA ->\n");
     Show(list);
+    system("pause");
+
+    system("cls || clear");
+    printf("Maximo ->\n");
+    maximumTime(list);
+    system("pause");
+
+    system("cls || clear");
+    printf("Minimo ->\n");
+    minimumTime(list);
     system("pause");
     return 0;
 }

@@ -220,5 +220,89 @@ ops * changeMachine(ops *list, int opID,int machine, int time)
             }
         }
     }
+    }
     return list;
+}
+
+
+/**
+ * @brief Funcao que determina o tempo máximo
+ * 
+ * @param list 
+ * @return ops* 
+ */
+ops *maximumTime(ops *list)
+{
+if (list != NULL)
+{
+    int max[100];
+    for (int i = 0; i < 100; i++)
+    {
+
+        max[i] = 0;
+    }
+    for (; list; list = list->next)
+    {
+        prod *prod = list->first;
+        for (; prod;)
+        {
+            if (max[list->opID] < prod->time)
+            {
+
+                max[list->opID] = prod->time;
+            }
+
+            prod = prod->next;
+        }
+    }
+    for (int i = 0; i < 100; i++)
+    {
+        if (max[i] != 0)
+        {
+            printf("%d -> %d \n", i, max[i]);
+        }
+    }
+    return list;
+}
+}
+
+
+/**
+ * @brief Funcao que determina o tempo minimo
+ * 
+ * @param list 
+ * @return ops* 
+ */
+ops *minimumTime(ops *list)
+{
+if (list != NULL)
+{
+
+    int min[100];
+    for (int i = 0; i < 100; i++)
+    {
+        min[i] = 9999;
+    }
+    for (; list; list = list->next)
+    {
+        prod *prod = list->first;
+        for (; prod;)
+        {
+            if (min[list->opID] > prod->time)
+            {
+                min[list->opID] = prod->time;
+            }
+
+            prod = prod->next;
+        }
+    }
+    for (int i = 0; i < 100; i++)
+    {
+        if (min[i] != 9999)
+        {
+            printf("%d -> %d \n", i, min[i]);
+        }
+    }
+    return list;
+}
 }
