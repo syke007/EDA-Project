@@ -40,6 +40,7 @@ ops * changeMachine(ops *list, int opID,int machine, int time);
 ops * removeMachine(ops *list, int opID);
 ops *minimumTime(ops *list);
 ops *maximumTime(ops *list);
+ops *avg(ops *list);
 
 
 #define DADOS

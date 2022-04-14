@@ -226,7 +226,7 @@ ops * changeMachine(ops *list, int opID,int machine, int time)
 
 
 /**
- * @brief Funcao que determina o tempo máximo
+ * @brief Funcao que determina o tempo máximo necessário para completar uma operação,
  * 
  * @param list 
  * @return ops* 
@@ -268,7 +268,7 @@ if (list != NULL)
 
 
 /**
- * @brief Funcao que determina o tempo minimo
+ * @brief Funcao que determina o tempo minimo necessário para completar uma operação,
  * 
  * @param list 
  * @return ops* 
@@ -301,6 +301,49 @@ if (list != NULL)
         if (min[i] != 9999)
         {
             printf("%d -> %d \n", i, min[i]);
+        }
+    }
+    return list;
+}
+}
+
+
+/**
+ * @brief funcao que determina a média de unidades de tempo necessárias para completar uma operação,
+ * 
+ * @param list 
+ * @return ops* 
+ */
+ops *avg(ops *list)
+{
+    if (list != NULL)
+{
+    int avg[100], cont[100];
+
+    for (int i = 0; i < 100; i++)
+    {
+        cont[i] = 0;
+        avg[i] = 0;
+    }
+
+    for (; list; list = list->next)
+    {
+        prod *prod = list->first;
+        for (; prod;)
+        {
+
+            avg[list->opID] += prod->time;
+            cont[list->opID]++;
+
+            prod = prod->next;
+        }
+    }
+    for (int i = 0; i < 100; i++)
+    {
+        if (cont[i] != 0)
+        {
+            float average = avg[i] / (float)cont[i];
+            printf("%d -> %.2f \n", i, average);
         }
     }
     return list;

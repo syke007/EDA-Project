@@ -48,5 +48,10 @@ int main()
     printf("Minimo ->\n");
     minimumTime(list);
     system("pause");
+
+    system("cls || clear");
+    printf("Media ->\n");
+    avg(list);
+    system("pause");
     return 0;
 }
