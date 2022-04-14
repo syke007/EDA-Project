@@ -1,5 +1,5 @@
 /**
- * @file functions.c
+ * @file header.h
  * @author Iuri Rodrigues (a21159@alunos.ipca.cpt)
  * @brief 
  * @version 0.1
@@ -20,7 +20,6 @@ typedef struct prod
     int machine;
     int time;
     struct prod *next, *prev;
-
 }prod;
 
 typedef struct ops
@@ -43,5 +42,4 @@ ops *maximumTime(ops *list);
 ops *avg(ops *list);
 
 
-#define DADOS
 #endif 

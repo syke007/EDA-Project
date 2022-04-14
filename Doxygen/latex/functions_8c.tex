@@ -1,0 +1,265 @@
+\hypertarget{functions_8c}{}\doxysection{functions.\+c File Reference}
+\label{functions_8c}\index{functions.c@{functions.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a8b7f8f7cb9528a2be5130477b8303dfb}{load\+Data}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em LÊ os dados do ficheiro txt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a0b9ecb64345bc523e678a84fe70c0726}{save\+Data}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em salva dados do ficheiro txt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_ae7eaf1f49a6b1a7506e080373b2ca8c8}{Show}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em aux \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprod}{prod}} $\ast$ \mbox{\hyperlink{functions_8c_a8e99044a6b88cc5f4092cfb51eba29c6}{headprod\+\_\+insert}} (\mbox{\hyperlink{structprod}{prod}} $\ast$list, int machine, int time)
+\begin{DoxyCompactList}\small\item\em inserçao á cabeça de produçoes. máquinas \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a529afe6481d2902a94d92ef72e972c50}{headops\+\_\+insert}} (\mbox{\hyperlink{structops}{ops}} $\ast$list, int op\+ID)
+\begin{DoxyCompactList}\small\item\em inserção á cabeça de operaçoes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a2ac1efcf6be4412e2688bad52a06dc41}{insert}} (\mbox{\hyperlink{structops}{ops}} $\ast$list, int op\+ID, int machine, int time)
+\begin{DoxyCompactList}\small\item\em inserir lista de maquinas dentro das operaçoes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a7b1134b1f54837e6904dbeec2897827c}{remove\+Machine}} (\mbox{\hyperlink{structops}{ops}} $\ast$list, int op\+ID)
+\begin{DoxyCompactList}\small\item\em Função que remove uma máquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a3401167da665d210d0a6ff20b8ab025b}{change\+Machine}} (\mbox{\hyperlink{structops}{ops}} $\ast$list, int op\+ID, int machine, int time)
+\begin{DoxyCompactList}\small\item\em Funçao que altera atributos de uma maquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a10e8bf1aa9e36647d9fa226574bce196}{maximum\+Time}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Funcao que determina o tempo máximo necessário para completar uma operação,. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a6359771d4bbaa93b6728713e4cfde5cd}{minimum\+Time}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Funcao que determina o tempo minimo necessário para completar uma operação,. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structops}{ops}} $\ast$ \mbox{\hyperlink{functions_8c_a1c9b3affaf7ab165ee6e2b246c6ed5c1}{avg}} (\mbox{\hyperlink{structops}{ops}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em funcao que determina a média de unidades de tempo necessárias para completar uma operação, \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Iuri Rodrigues (\href{mailto:a21159@alunos.ipca.cpt}{\texttt{ a21159@alunos.\+ipca.\+cpt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functions_8c_a1c9b3affaf7ab165ee6e2b246c6ed5c1}\label{functions_8c_a1c9b3affaf7ab165ee6e2b246c6ed5c1}} 
+\index{functions.c@{functions.c}!avg@{avg}}
+\index{avg@{avg}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{avg()}{avg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ avg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+funcao que determina a média de unidades de tempo necessárias para completar uma operação, 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a3401167da665d210d0a6ff20b8ab025b}\label{functions_8c_a3401167da665d210d0a6ff20b8ab025b}} 
+\index{functions.c@{functions.c}!changeMachine@{changeMachine}}
+\index{changeMachine@{changeMachine}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{changeMachine()}{changeMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ change\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list,  }\item[{int}]{op\+ID,  }\item[{int}]{machine,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Funçao que altera atributos de uma maquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em op\+ID} & \\
+\hline
+{\em machine} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a529afe6481d2902a94d92ef72e972c50}\label{functions_8c_a529afe6481d2902a94d92ef72e972c50}} 
+\index{functions.c@{functions.c}!headops\_insert@{headops\_insert}}
+\index{headops\_insert@{headops\_insert}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{headops\_insert()}{headops\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ headops\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list,  }\item[{int}]{op\+ID }\end{DoxyParamCaption})}
+
+
+
+inserção á cabeça de operaçoes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em op\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8e99044a6b88cc5f4092cfb51eba29c6}\label{functions_8c_a8e99044a6b88cc5f4092cfb51eba29c6}} 
+\index{functions.c@{functions.c}!headprod\_insert@{headprod\_insert}}
+\index{headprod\_insert@{headprod\_insert}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{headprod\_insert()}{headprod\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structprod}{prod}} $\ast$ headprod\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprod}{prod}} $\ast$}]{list,  }\item[{int}]{machine,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+inserçao á cabeça de produçoes. máquinas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em machine} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a2ac1efcf6be4412e2688bad52a06dc41}\label{functions_8c_a2ac1efcf6be4412e2688bad52a06dc41}} 
+\index{functions.c@{functions.c}!insert@{insert}}
+\index{insert@{insert}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list,  }\item[{int}]{op\+ID,  }\item[{int}]{machine,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+inserir lista de maquinas dentro das operaçoes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em op\+ID} & \\
+\hline
+{\em machine} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8b7f8f7cb9528a2be5130477b8303dfb}\label{functions_8c_a8b7f8f7cb9528a2be5130477b8303dfb}} 
+\index{functions.c@{functions.c}!loadData@{loadData}}
+\index{loadData@{loadData}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ load\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+LÊ os dados do ficheiro txt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a10e8bf1aa9e36647d9fa226574bce196}\label{functions_8c_a10e8bf1aa9e36647d9fa226574bce196}} 
+\index{functions.c@{functions.c}!maximumTime@{maximumTime}}
+\index{maximumTime@{maximumTime}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{maximumTime()}{maximumTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ maximum\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Funcao que determina o tempo máximo necessário para completar uma operação,. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a6359771d4bbaa93b6728713e4cfde5cd}\label{functions_8c_a6359771d4bbaa93b6728713e4cfde5cd}} 
+\index{functions.c@{functions.c}!minimumTime@{minimumTime}}
+\index{minimumTime@{minimumTime}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{minimumTime()}{minimumTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ minimum\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Funcao que determina o tempo minimo necessário para completar uma operação,. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a7b1134b1f54837e6904dbeec2897827c}\label{functions_8c_a7b1134b1f54837e6904dbeec2897827c}} 
+\index{functions.c@{functions.c}!removeMachine@{removeMachine}}
+\index{removeMachine@{removeMachine}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{removeMachine()}{removeMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structops}{ops}} $\ast$ remove\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list,  }\item[{int}]{op\+ID }\end{DoxyParamCaption})}
+
+
+
+Função que remove uma máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em op\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a0b9ecb64345bc523e678a84fe70c0726}\label{functions_8c_a0b9ecb64345bc523e678a84fe70c0726}} 
+\index{functions.c@{functions.c}!saveData@{saveData}}
+\index{saveData@{saveData}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily void save\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+salva dados do ficheiro txt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_ae7eaf1f49a6b1a7506e080373b2ca8c8}\label{functions_8c_ae7eaf1f49a6b1a7506e080373b2ca8c8}} 
+\index{functions.c@{functions.c}!Show@{Show}}
+\index{Show@{Show}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily void Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structops}{ops}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+aux 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+\end{DoxyParams}

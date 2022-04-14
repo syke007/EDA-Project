@@ -18,7 +18,7 @@
  * @brief LÊ os dados do ficheiro txt
  * 
  * @param list 
- * @return ops* 
+ * @return list
  */
 ops *loadData(ops *list)    
 {
@@ -44,7 +44,7 @@ ops *loadData(ops *list)
  * @brief salva dados do ficheiro txt
  * 
  * @param list 
- * @return ops* 
+ * @return  
  */
 void saveData(ops *list)
 {
@@ -62,6 +62,7 @@ void saveData(ops *list)
     }
     fclose(fp);
 }
+
 
 /**
  * @brief aux
@@ -83,13 +84,14 @@ void Show(ops *list)
     }
 }
 
+
 /**
  * @brief  inserçao á cabeça de produçoes. máquinas
  * 
  * @param list 
  * @param machine 
  * @param time 
- * @return prod* 
+ * @return new 
  */
 prod *headprod_insert(prod *list, int machine, int time)
 {
@@ -107,7 +109,7 @@ prod *headprod_insert(prod *list, int machine, int time)
  * 
  * @param list 
  * @param opID 
- * @return ops* 
+ * @return new 
  */
 ops *headops_insert(ops *list, int opID)
 {
@@ -119,6 +121,7 @@ ops *headops_insert(ops *list, int opID)
     return new;
 }
 
+
 /**
  * @brief inserir lista de maquinas dentro das operaçoes
  * 
@@ -126,7 +129,7 @@ ops *headops_insert(ops *list, int opID)
  * @param opID 
  * @param machine 
  * @param time 
- * @return ops* 
+ * @return list 
  */
 ops *insert(ops *list, int opID, int machine, int time)
 {
@@ -157,7 +160,7 @@ ops *insert(ops *list, int opID, int machine, int time)
  * 
  * @param list 
  * @param opID 
- * @return ops* 
+ * @return list 
  */
 ops * removeMachine(ops *list, int opID)
 {
@@ -198,7 +201,7 @@ ops * removeMachine(ops *list, int opID)
  * @param opID 
  * @param machine 
  * @param time 
- * @return ops* 
+ * @return list 
  */
 ops * changeMachine(ops *list, int opID,int machine, int time)
 {
@@ -229,7 +232,7 @@ ops * changeMachine(ops *list, int opID,int machine, int time)
  * @brief Funcao que determina o tempo máximo necessário para completar uma operação,
  * 
  * @param list 
- * @return ops* 
+ * @return list 
  */
 ops *maximumTime(ops *list)
 {
@@ -271,7 +274,7 @@ if (list != NULL)
  * @brief Funcao que determina o tempo minimo necessário para completar uma operação,
  * 
  * @param list 
- * @return ops* 
+ * @return list 
  */
 ops *minimumTime(ops *list)
 {
@@ -312,7 +315,7 @@ if (list != NULL)
  * @brief funcao que determina a média de unidades de tempo necessárias para completar uma operação,
  * 
  * @param list 
- * @return ops* 
+ * @return list 
  */
 ops *avg(ops *list)
 {

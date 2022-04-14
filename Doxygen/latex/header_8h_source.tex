@@ -1,0 +1,40 @@
+\hypertarget{header_8h_source}{}\doxysection{header.\+h}
+\mbox{\hyperlink{header_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef funcoes}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define funcoes}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#pragma warning ( disable : 4996) }}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structprod}{prod}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} machine;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} time;}
+\DoxyCodeLine{22     \textcolor{keyword}{struct }\mbox{\hyperlink{structprod}{prod}} *next, *prev;}
+\DoxyCodeLine{23 \}\mbox{\hyperlink{structprod}{prod}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structops}{ops}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} opID;}
+\DoxyCodeLine{28     \textcolor{keyword}{struct }\mbox{\hyperlink{structops}{ops}} *next, *prev;}
+\DoxyCodeLine{29     \textcolor{keyword}{struct }\mbox{\hyperlink{structprod}{prod}} *first, *last;}
+\DoxyCodeLine{30 \}\mbox{\hyperlink{structops}{ops}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a8b7f8f7cb9528a2be5130477b8303dfb}{loadData}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{header_8h_a0b9ecb64345bc523e678a84fe70c0726}{saveData}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{header_8h_ae7eaf1f49a6b1a7506e080373b2ca8c8}{Show}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{35 \mbox{\hyperlink{structprod}{prod}} *\mbox{\hyperlink{header_8h_a8e99044a6b88cc5f4092cfb51eba29c6}{headprod\_insert}}(\mbox{\hyperlink{structprod}{prod}} *list, \textcolor{keywordtype}{int} machine, \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{36 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a529afe6481d2902a94d92ef72e972c50}{headops\_insert}}(\mbox{\hyperlink{structops}{ops}} *list, \textcolor{keywordtype}{int} opID);}
+\DoxyCodeLine{37 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a2ac1efcf6be4412e2688bad52a06dc41}{insert}}(\mbox{\hyperlink{structops}{ops}} *list, \textcolor{keywordtype}{int} opID, \textcolor{keywordtype}{int} machine, \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{38 \mbox{\hyperlink{structops}{ops}} * \mbox{\hyperlink{header_8h_a3401167da665d210d0a6ff20b8ab025b}{changeMachine}}(\mbox{\hyperlink{structops}{ops}} *list, \textcolor{keywordtype}{int} opID,\textcolor{keywordtype}{int} machine, \textcolor{keywordtype}{int} time);}
+\DoxyCodeLine{39 \mbox{\hyperlink{structops}{ops}} * \mbox{\hyperlink{header_8h_a7b1134b1f54837e6904dbeec2897827c}{removeMachine}}(\mbox{\hyperlink{structops}{ops}} *list, \textcolor{keywordtype}{int} opID);}
+\DoxyCodeLine{40 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a6359771d4bbaa93b6728713e4cfde5cd}{minimumTime}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{41 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a10e8bf1aa9e36647d9fa226574bce196}{maximumTime}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{42 \mbox{\hyperlink{structops}{ops}} *\mbox{\hyperlink{header_8h_a1c9b3affaf7ab165ee6e2b246c6ed5c1}{avg}}(\mbox{\hyperlink{structops}{ops}} *list);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}
