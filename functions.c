@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2022
  * 
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -133,26 +132,27 @@ ops *headops_insert(ops *list, int opID)
  */
 ops *insert(ops *list, int opID, int machine, int time)
 {
-    ops *aux = list;
-    while (aux)
-    {
-        if (aux->opID == opID)
-        {
-            break;
-        }
-        aux = aux->next;
-    }
+	if (list != NULL)
+	 {
+		for (; list; list = list->next)
+		{
+			if(list->opID == opID)
+			{
+				if (!list->last)
+				{
+					list->first = list->last = headprod_insert(list->last,machine,time);
+				}
+				else
+				{
+					list->last = headprod_insert(list->last,machine,time);
+				}
+				return list;
 
-    if (!aux->last)
-    {
-        aux->first = aux->last = headprod_insert(aux->last,machine,time);
-    }
-    else
-    {
-        aux->last = headprod_insert(aux->last,machine,time);
-    }
-    return list;
-}
+			}
+		}
+	}	
+		
+ }
 
 
 /**
