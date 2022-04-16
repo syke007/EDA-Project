@@ -84,7 +84,7 @@ int main()
             system("cls"); 
             printf("Id da operacao -> "); 
             scanf("%d",&opID);
-            removeMachine(list,opID);
+            removeOP(list,opID);
             system("pause");
             break;
 
@@ -94,9 +94,10 @@ int main()
             scanf("%d",&opID);
             printf("Maquina -> "); 
             scanf("%d",&machine);
+            printf("---------------\n");
             printf("Unidade de tempo -> "); 
             scanf("%d",&time);
-
+            
             changeMachine(list,opID,machine,time);
             system("pause");
             break;

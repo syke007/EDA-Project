@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2022
  * 
  */
-
 #ifndef funcoes
 #define funcoes
 
@@ -36,7 +35,7 @@ prod *headprod_insert(prod *list, int machine, int time);
 ops *headops_insert(ops *list, int opID);
 ops *insert(ops *list, int opID, int machine, int time);
 ops * changeMachine(ops *list, int opID,int machine, int time);
-ops * removeMachine(ops *list, int opID);
+ops * removeOP(ops *list, int opID);
 ops *minimumTime(ops *list);
 ops *maximumTime(ops *list);
 ops *avg(ops *list);
